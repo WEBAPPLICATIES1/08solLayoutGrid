@@ -20,7 +20,12 @@ div.grid-center {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(5, 5rem);
-  grid-template-rows: repeat(4, 5rem);
+  grid-auto-rows: 5rem;
+  grid-template-areas:
+    '.    .    .    box1 .   '
+    'box2 box3 box4 box5 box6'
+    '.    .    .    box7 .   '
+    '.    .    .    box8 .   ';
   gap: 0.2rem;
 }
 
@@ -37,45 +42,31 @@ div.grid-center {
   align-items: center;
 }
 
-/* De verschillende boxen (grid items) positioneren op de grid
-   met behulp van de lijnnummers */
+/* De verschillende boxen (grid items) positioneren op de grid  */
 
 .box1 {
-  grid-column: 4;
-  grid-row: 1;
+  grid-area: box1;
 }
-
 .box2 {
-  grid-column: 1;
-  grid-row: 2;
+  grid-area: box2;
 }
-
 .box3 {
-  grid-column: 2;
-  grid-row: 2;
+  grid-area: box3;
 }
-
 .box4 {
-  grid-column: 3;
-  grid-row: 2;
+  grid-area: box4;
 }
-
 .box5 {
-  grid-column: 4;
-  grid-row: 2;
+  grid-area: box5;
 }
-
 .box6 {
-  grid-column: 5;
-  grid-row: 2;
+  grid-area: box6;
 }
-
 .box7 {
-  grid-column: 4;
-  grid-row: 3;
+  grid-area: box7;
+}
+.box8 {
+  grid-area: box8;    
 }
 
-.box8 {
-  grid-column: 4;
-  grid-row: 4;
-}
+

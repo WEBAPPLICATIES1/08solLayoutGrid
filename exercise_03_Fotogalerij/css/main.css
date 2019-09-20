@@ -12,3 +12,17 @@ h1 {
   color: #444;
   text-align: center;
 }
+
+/* OPLOSSING */
+
+/* De flexible grid creëren...  */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+/* De foto's moeten de breedte van hun container innemen. */
+main img {
+  width: 100%;
+}
